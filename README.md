@@ -8,7 +8,7 @@ Hands-on identity and access management (IAM) lab built in Microsoft Azure and E
 
 | # | Project | What it covers | Status |
 |---|---------|----------------|--------|
-| 1 | [Azure Landing Zone](project1-landing-zone/) | Management group hierarchy (CAF), group-based RBAC, custom least-privilege role, Azure Policy guardrails | 🟡 In progress |
+| 1 | [Azure Landing Zone](Project1-landing-zone/) | Management group hierarchy (CAF), group-based RBAC, custom least-privilege role, Azure Policy guardrails | 🟡 In progress |
 | 2 | Enterprise IAM | Privileged Identity Management (PIM), Conditional Access, MFA, Access Reviews | ⚪ Planned |
 | 3 | Automated Onboarding | Joiner / mover / leaver workflows with Power Automate + Entra ID | ⚪ Planned |
 | 4 | RBAC Audit Dashboard | Power BI reporting on role assignments and access | ⚪ Planned |
