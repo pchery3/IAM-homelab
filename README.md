@@ -25,4 +25,4 @@ Microsoft Azure · Microsoft Entra ID · Azure RBAC · Azure Policy · Microsoft
 
 ## About me
 
-Building toward IAM / Zero Trust roles. Connect with me on LinkedIn: [add your LinkedIn URL]
+Building toward IAM / Zero Trust roles. Connect with me on LinkedIn: (https://www.linkedin.com/in/patriquechery-cyber)
