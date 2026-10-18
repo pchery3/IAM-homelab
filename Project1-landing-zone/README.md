@@ -27,7 +27,7 @@ graph TD
 
 Roles and policies assigned at a management group are **inherited** by everything beneath it.
 
-![Management group tree](screenshots/01-mg-tree.png)
+![Management group tree](screenshots/01-mg-tree.jpg.jpeg)
 
 ---
 
@@ -58,8 +58,8 @@ Created 4 cloud-only users with job title and department, and **no admin roles**
 | Ana Garcia | Auditor | GRP-Auditors-Reader |
 | Tom Nguyen | IT Operations | GRP-VM-Operators |
 
-![Test users](screenshots/02-test-users.png)
-![Security groups](screenshots/03-groups.png)
+![Test users](screenshots/02-test-users.jpg.jpeg)
+![Security groups](screenshots/03-groups.jpg.jpeg)
 
 ## 4. Group-based RBAC
 
@@ -71,9 +71,9 @@ Created 4 cloud-only users with job title and department, and **no admin roles**
 
 The auditors' Reader role was assigned once at Contoso and appears as **Inherited** on Platform and Corp.
 
-![RBAC at Contoso](screenshots/04-rbac-contoso.png)
-![RBAC at Platform](screenshots/05-rbac-platform.png)
-![RBAC at Corp, showing inheritance](screenshots/06-rbac-corp.png)
+![RBAC at Contoso](screenshots/04-rbac-contoso.jpg.jpeg)
+![RBAC at Platform](screenshots/05-rbac-platform.jpg.jpeg)
+![RBAC at Corp, showing inheritance](screenshots/06-rbac-corp.jpg.jpeg)
 
 ## 5. Custom least-privilege role
 
@@ -86,9 +86,8 @@ No built-in role lets IT operations restart VMs without also letting them delete
 | `Microsoft.Compute/virtualMachines/restart/action` | Restart |
 | `Microsoft.Compute/virtualMachines/deallocate/action` | Stop and release compute |
 
-![Custom role permissions](screenshots/07-custom-role-permissions.png)
-![Custom role JSON](screenshots/08-custom-role-json.png)
-![Custom role assignment](screenshots/09-custom-role-assignment.png)
+![Custom role permissions](screenshots/07-custom-role-permissions.jpg.jpeg)
+![Custom role JSON](screenshots/08-custom-role-json.jpg.jpeg)
 
 ## 6. Permission testing
 
@@ -99,8 +98,8 @@ Signed in as test users and tried the same action: creating a resource group in 
 | Ana Garcia | Reader (inherited from Contoso) | ❌ "You do not have permissions to create resource groups" |
 | Maria Lee | Contributor at Corp | ✅ Resource group created |
 
-![Auditor denied](screenshots/10-agarcia-denied.png)
-![Developer allowed](screenshots/11-mlee-success.png)
+![Auditor denied](screenshots/10-agarcia-denied.jpg.jpeg)
+![Developer allowed](screenshots/11-mlee-success.jpg.jpeg)
 
 ## 7. Azure Policy guardrails
 
@@ -111,7 +110,7 @@ Signed in as test users and tried the same action: creating a resource group in 
 | Require a tag on resource groups | Landing Zones | `CostCenter` |
 | Not allowed resource types | Corp | Public IP addresses |
 
-![Policy assignments](screenshots/12-policy-assignments.png)
+![Policy assignments](screenshots/12-policy-assignments.jpg.jpeg)
 
 ## 8. Proving the guardrails work
 
@@ -124,17 +123,17 @@ All tests were run as an **Owner**, which shows that policy applies even to the 
 | Public IP in Corp | ❌ `RequestDisallowedByPolicy`: *Not allowed resource types* |
 | Compliance dashboard | `rg-test-mlee` (created before the tag policy) flagged **Non-compliant** |
 
-![Location denied](screenshots/13-policy-deny-location.png)
-![Tagged resource group allowed](screenshots/14-policy-allowed.png)
-![Public IP denied](screenshots/15-policy-deny-publicip.png)
-![Compliance view](screenshots/16-policy-compliance.png)
+![Location denied](screenshots/13-policy-deny-location.jpeg)
+![Tagged resource group allowed](screenshots/14-policy-allowed.jpg.jpeg)
+![Public IP denied](screenshots/15-policy-deny-publicip.jpg.jpeg)
+![Compliance view](screenshots/16-policy-compliance.jpg.jpeg)
 
 ## 9. Cleanup
 
 - Deleted the test resource groups.
 - Removed standing **elevated access** (User Access Administrator at root) from both accounts once the work was done.
 
-![Elevated access off](screenshots/18-elevated-access-off.png)
+![Elevated access off](screenshots/18-elevated-access-off.jpg.jpeg)
 
 ---
 
