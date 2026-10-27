@@ -6,6 +6,8 @@
 
 **Company:** Contoso Maritime (fictional) · **Tools:** Azure portal, Microsoft Entra ID, Azure RBAC, Azure Policy · **Cost:** $0
 
+**As code:** the whole landing zone is also written in Bicep, see [`bicep/`](bicep/).
+
 ---
 
 ## Architecture
