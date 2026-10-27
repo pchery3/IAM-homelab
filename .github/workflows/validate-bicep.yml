@@ -1,0 +1,44 @@
+name: Validate Bicep
+
+on:
+  push:
+    paths:
+      - '**/*.bicep'
+      - '**/*.bicepparam'
+      - '.github/workflows/validate-bicep.yml'
+  pull_request:
+    paths:
+      - '**/*.bicep'
+      - '**/*.bicepparam'
+      - '.github/workflows/validate-bicep.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Bicep
+        run: az bicep install && az bicep version
+
+      - name: Compile templates
+        run: |
+          set -euo pipefail
+          find . -name '*.bicep' -print0 | while IFS= read -r -d '' f; do
+            echo "::group::$f"
+            az bicep build --file "$f" --stdout > /dev/null
+            echo "::endgroup::"
+          done
+
+      - name: Compile parameter files
+        run: |
+          set -euo pipefail
+          find . -name '*.bicepparam' -print0 | while IFS= read -r -d '' f; do
+            echo "::group::$f"
+            az bicep build-params --file "$f" --stdout > /dev/null
+            echo "::endgroup::"
+          done

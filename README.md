@@ -8,8 +8,8 @@ Hands-on identity and access management (IAM) lab built in Microsoft Azure and E
 
 | # | Project | What it covers | Status |
 |---|---------|----------------|--------|
-| 1 | [Azure Landing Zone](Project1-landing-zone/) | Management group hierarchy (CAF), group-based RBAC, custom least-privilege role, Azure Policy guardrails | ✅ Complete |
-| 2 | Enterprise IAM | Privileged Identity Management (PIM), Conditional Access, MFA, Access Reviews | ⚪ Planned |
+| 1 | [Azure Landing Zone](Project1-landing-zone/) | Management group hierarchy (CAF), group-based RBAC, custom least-privilege role, Azure Policy guardrails. Also built [as code with Bicep](Project1-landing-zone/bicep/) | ✅ Complete |
+| 2 | [Enterprise IAM](Project2-enterprise-iam/) | Privileged Identity Management (PIM), Conditional Access, MFA, Access Reviews | ⚪ Planned (lab guide ready) |
 | 3 | Automated Onboarding | Joiner / mover / leaver workflows with Power Automate + Entra ID | ⚪ Planned |
 | 4 | RBAC Audit Dashboard | Power BI reporting on role assignments and access | ⚪ Planned |
 
@@ -21,7 +21,7 @@ Hands-on identity and access management (IAM) lab built in Microsoft Azure and E
 
 ## Tools
 
-Microsoft Azure · Microsoft Entra ID · Azure RBAC · Azure Policy · Microsoft Authenticator · diagrams.net
+Microsoft Azure · Microsoft Entra ID · Azure RBAC · Azure Policy · Bicep · Microsoft Graph PowerShell · GitHub Actions · Microsoft Authenticator · diagrams.net
 
 ## About me
 
